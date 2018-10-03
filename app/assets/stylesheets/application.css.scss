@@ -1,0 +1,9 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "cohorts.css";
+
+.custom-nav {
+  background-color: purple;
+  color: white;
+  margin-top: 75px;
+}
