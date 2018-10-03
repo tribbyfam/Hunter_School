@@ -6,6 +6,7 @@ describe 'navigate' do
       visit courses_path
       expect(page.status_code).to eq(200)
     end
+
     if 'has a title of courses' do
       visit courses_path
       expect(page).to have_content(/courses/)
@@ -13,16 +14,19 @@ describe 'navigate' do
   end
 
   describe 'creation' do
-    it 'has a new form that could be reached' do
+    before do
       visit new_course_path
+    end
+
+    it 'has a new form that could be reached' do
       expect(page.status_code).to eq(200)
     end
 
     it 'can be created from form page' do
-      visit new_course_path
-
       fill_in '[name]', with: "SEI"
+      fill_in '[hours]', with: "40"
       click_on "Save"
+      
       expect(page).to have_content("SEI")
     end
   end
