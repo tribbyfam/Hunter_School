@@ -1,6 +1,7 @@
 <%= form_for @course do |c| %>
 
-<%= c.text_field :name %>
+Course name: <%= c.text_field :name %>
+Course hours: <%= c.text_field :hours %>
 <%= c.submit 'Save' %>
 
 <% end %>

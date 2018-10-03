@@ -11,7 +11,8 @@ RSpec.describe Post, type: :model do
   	end
 
   	it 'cannot be created without a name' do
-  		@course.name = nil
+			@course.name = nil
+			@course.hours = nil
   		expect(@course).to_not be_valid
   	end
   end

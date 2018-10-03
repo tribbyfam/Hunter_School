@@ -11,6 +11,7 @@ class CoursesController < ApplicationController
   def create
     @course = Course.create(
       name: params[:course][:name],
+      hours: params[:course][:hours],
       user_id: session[:user_id])
 
     # @course = Course.create(params.require(:course).permit(:name))
@@ -27,5 +28,10 @@ class CoursesController < ApplicationController
 
   def edit
   end
+   
+  private
 
+  def course_params
+
+  end
 end
