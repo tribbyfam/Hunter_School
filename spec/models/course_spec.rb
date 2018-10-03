@@ -10,7 +10,7 @@ RSpec.describe Post, type: :model do
   		expect(@course).to be_valid
   	end
 
-  	it 'cannot be created without a date and rationale' do
+  	it 'cannot be created without a name' do
   		@course.name = nil
   		expect(@course).to_not be_valid
   	end
