@@ -11,8 +11,8 @@ class CoursesController < ApplicationController
   
   def create
     @course = Course.new(course_params)
+    # @post.user_id = current_user.id
 
-    # @course = Course.create(params.require(:course).permit(:name))
     if @course.save
       redirect_to course_path(@course), notice: 'Your course was created'
     else
