@@ -1,23 +1,22 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show]
+  
   def index
     @courses = Course.all
   end
 
   def new
     @course = Course.new
-    @user_id = session[:user_id]
+    @user_id = current_user.id
   end
   
   def create
-    @course = Course.new(course_params)
-    # @post.user_id = current_user.id
-
-    if @course.save
-      redirect_to course_path(@course), notice: 'Your course was created'
-    else
-      render :new
-    end
+    @course = Course.create(
+      name: params[:course][:name],
+      hours: params[:course][:hours],
+      user_id: current_user.id
+    ) 
+    redirect_to course_path(@course)
   end
 
   def show
@@ -32,7 +31,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.require(:course).permit(:name, :hours)
+    params.require(:course).permit(:course_id, :name, :hours)
   end
 
   def set_course

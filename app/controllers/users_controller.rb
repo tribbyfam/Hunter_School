@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  before_action :authorize, except: [:new]
   def index
     @user = User.all
   end
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = User.find(params[:id])
+    user = current_user
     user.update(
     first_name: params[:user][:first_name],
     last_name: params[:user][:last_name],
@@ -33,13 +33,13 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    user = User.find(params[:id])
+    user = current_user
     user.destroy
     redirect_to users_path
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
 end

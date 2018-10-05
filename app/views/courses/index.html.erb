@@ -1,1 +1,45 @@
-<h2>courses</h2>
+<h2>courses</h2>  
+<%= @course.inspect %>
+
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>
+        #
+      </th>
+      <th>
+        Course Name
+      </th>
+      <th>
+        Hours
+      </th>
+      <th>
+        Created on
+      </th>
+      <th>
+        Created by
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= @courses.each do |course| %>
+      <tr>
+        <td>
+          <%= course.id %>
+        </td>
+        <td>
+          <%= course.name %>
+        </td>
+        <td>
+          <%= course.hours %>
+        </td>
+        <td>
+          <%= course.created_at.strftime("%d/%m/%Y") %>
+        </td>
+        <td>
+          <%= course.user.first_name %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
