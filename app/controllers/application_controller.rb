@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
 
 
   def full_name
-    fname = User.first_name
-    lname = User.last_name
+    fname = User.first_name.capitalize
+    lname = User.last_name.capitalize
     full_name = "fname" + " " + "lname"
   end
 

@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  before_action :set_course, only: [:show]
+  before_action :set_course, only: [:show, :edit, :update]
   
   def index
     @courses = Course.all
@@ -16,13 +16,18 @@ class CoursesController < ApplicationController
       hours: params[:course][:hours],
       user_id: current_user.id
     ) 
-    redirect_to course_path(@course)
+    redirect_to courses_path
   end
 
   def show
   end
 
   def update
+    if @course.update(course_params)
+      redirect_to @course, notice: 'Your course was successfully created'
+    else
+      render :edit
+    end
   end
 
   def edit

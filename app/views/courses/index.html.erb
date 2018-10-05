@@ -19,27 +19,13 @@
       <th>
         Created by
       </th>
+      <th>
+      </th>
+      <th>
+      </th>
     </tr>
   </thead>
   <tbody>
-    <%= @courses.each do |course| %>
-      <tr>
-        <td>
-          <%= course.id %>
-        </td>
-        <td>
-          <%= course.name %>
-        </td>
-        <td>
-          <%= course.hours %>
-        </td>
-        <td>
-          <%= course.created_at.strftime("%d/%m/%Y") %>
-        </td>
-        <td>
-          <%= course.user.first_name %>
-        </td>
-      </tr>
-    <% end %>
+    <%= render @courses %>
   </tbody>
 </table>
