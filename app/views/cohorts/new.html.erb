@@ -1,0 +1,11 @@
+<h2>new create</h2>
+
+<%= form_with model: @cohort do |c| %>
+  Cohort Name: <%= c.text_field :name %><br />
+  Start Date: <%= c.date_field :start_date %><br />
+  End Date: <%= c.date_field :end_date %><br />
+  Instructor: <%= c.text_field :instructor %><br />
+<%= c.hidden_field :user_id, value: session[:user_id] %>
+<%= c.submit %>
+<% end %> 
+<%# <%= render 'form' %> %>
