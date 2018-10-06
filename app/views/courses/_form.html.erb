@@ -1,19 +1,15 @@
 <%= form_for @course do |c| %>
-<form role="form">
+
   <div class="form-group">   
-    <label>
-      Course name:
-    </label>
-    <%= c.text_field :name %>
+   <%= c.label :Name, class: "col-sm-2 control-label" %>
+    <%= c.text_field :name, class: "form-control" %>
   </div>
   <div class="form-group">   
-    <label>
-      Course hours:
-    </label>
-    <%= c.text_field :hours %>
+   <%= c.label :Hours, class: "col-sm-2 control-label" %>
+    <%= c.text_field :hours, class: "form-control" %>
   </div>
-  <button type="submit" class="btn btn-primary btn-md">
-    "Save"
+  <button type="submit" class="btn btn-primary btn-lg btn-block">
+    Save
   </button>
-</form>
+
 <% end %>
