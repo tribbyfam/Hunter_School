@@ -1,5 +1,5 @@
 class CohortsController < ApplicationController
-  # before_action :set_cohort, only: [:show, :edit, :update, :destroy]
+  before_action :set_cohort, only: [:show, :edit, :update, :destroy]
 
   def index
     @cohorts = Cohort.all
@@ -11,19 +11,32 @@ class CohortsController < ApplicationController
 
   def create
     @cohort = Cohort.create(cohort_params) 
-    redirect_to cohorts_path
+
+    if @cohort
+			redirect_to cohorts_path, notice: 'Your post was created successfully'
+		else
+			render :new
+		end
+    
   end
 
   def show
   end
    
   def update
+    if @cohort.update(cohort_params)
+      redirect_to cohorts_path, notice: 'Your course was successfully edited'
+    else
+      render :edit
+    end
   end
-
+  
   def edit
   end
 
   def destroy
+    @cohort.delete
+    redirect_to cohorts_path, notice: 'Your course was successfully deleted'
   end
 
   private

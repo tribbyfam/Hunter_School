@@ -34,7 +34,7 @@ class CoursesController < ApplicationController
   end
 
   def destroy
-    @course.delete
+    set_course.delete
     redirect_to courses_path, notice: 'Your course was successfully deleted'
   end
    
