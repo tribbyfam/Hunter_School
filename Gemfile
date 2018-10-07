@@ -64,4 +64,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'bootstrap-sass'
-gem 'gritter'
+gem 'gritter', '~> 1.2'
+gem 'administrate', '~> 0.11.0'
+gem 'bourbon', '~> 5.1'
