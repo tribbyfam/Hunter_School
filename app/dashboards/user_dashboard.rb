@@ -8,24 +8,24 @@ class UserDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    id: Field::Number,
-    email: Field::String,
-    password: Field::String,
-    sign_in_count: Field::Number,
-    current_sign_in_at: Field::DateTime,
-    last_sign_in_at: Field::DateTime,
+    id: Field::Number.with_options(searchable: false),
+    email: Field::String.with_options(searchable: true),
+    password: Field::String.with_options(searchable: false),
+    sign_in_count: Field::Number.with_options(searchable: false),
+    current_sign_in_at: Field::DateTime.with_options(searchable: false),
+    last_sign_in_at: Field::DateTime.with_options(searchable: false),
     current_sign_in_ip: Field::String.with_options(searchable: false),
     last_sign_in_ip: Field::String.with_options(searchable: false),
-    first_name: Field::String,
-    last_name: Field::String,
-    age: Field::String,
-    education: Field::String,
-    url: Field::String,
-    course: Field::Number,
-    cohort: Field::Number,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
-    type: Field::String,
+    first_name: Field::String.with_options(searchable: true),
+    last_name: Field::String.with_options(searchable: true),
+    age: Field::String.with_options(searchable: false),
+    education: Field::String.with_options(searchable: true),
+    url: Field::String.with_options(searchable: false),
+    course: Field::Number.with_options(searchable: true),
+    cohort: Field::Number.with_options(searchable: true),
+    created_at: Field::DateTime.with_options(searchable: false),
+    updated_at: Field::DateTime.with_options(searchable: false),
+    type: Field::String.with_options(searchable: false),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -36,7 +36,6 @@ class UserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     # :courses,
     # :cohorts,
-    :id,
     :email,
     :type,
   ].freeze

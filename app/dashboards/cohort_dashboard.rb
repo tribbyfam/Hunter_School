@@ -8,15 +8,15 @@ class CohortDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    user: Field::BelongsTo,
-    id: Field::Number,
-    name: Field::String,
-    start_date: Field::DateTime,
-    end_date: Field::DateTime,
-    course_id: Field::Number,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
-    instructor: Field::String,
+    user: Field::BelongsTo.with_options(searchable: false),
+    id: Field::Number.with_options(searchable: false),
+    name: Field::String.with_options(searchable: true),
+    start_date: Field::DateTime.with_options(searchable: false),
+    end_date: Field::DateTime.with_options(searchable: false),
+    course_id: Field::Number.with_options(searchable: false),
+    created_at: Field::DateTime.with_options(searchable: false),
+    updated_at: Field::DateTime.with_options(searchable: false),
+    instructor: Field::String.with_options(searchable: true),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -26,9 +26,9 @@ class CohortDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :user,
-    :id,
     :name,
     :start_date,
+    :end_date,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
