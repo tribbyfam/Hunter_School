@@ -16,7 +16,7 @@ class CoursesController < ApplicationController
       hours: params[:course][:hours],
       user_id: current_user.id
     ) 
-    redirect_to courses_path
+    redirect_to courses_path, notice: 'Your course was successfully created'
   end
 
   def show

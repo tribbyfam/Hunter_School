@@ -24,12 +24,12 @@
       </div>
       <div class="row">
         <div class="col-md-4">
-          <%= link_to 'Delete', course_path(course), method: :delete, id: "#{course.id}" %>
+          <%= link_to 'Delete', course_path(course), method: :delete, id: "#{course.id}", data: { confirm: 'Are you sure?' } %>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4">
-          <%= link_to 'Cohorts', cohorts_path %>
+          <%# <%= link_to 'Cohorts', cohort_path(cohort), id: "#{cohort.id}" %> %>
         </div>
       </div>
     </div>

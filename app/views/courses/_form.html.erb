@@ -1,4 +1,9 @@
-<%= form_for @course do |c| %>
+<%= form_for @course, class: "form-horizontal" do |c| %>
+<% if @course.errors.any? %>
+  <% @course.errors.full_messages.each do |error| %>
+  <%= js add_gritter(error, title: "School App Notification", sticky: false) %>
+  <% end %>
+<% end %>
 
   <div class="form-group">   
    <%= c.label :Name, class: "col-sm-2 control-label" %>

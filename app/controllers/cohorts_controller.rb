@@ -13,7 +13,7 @@ class CohortsController < ApplicationController
     @cohort = Cohort.create(cohort_params) 
 
     if @cohort
-			redirect_to cohorts_path, notice: 'Your post was created successfully'
+			redirect_to cohorts_path, notice: 'Your cohort was successfully created'
 		else
 			render :new
 		end
@@ -25,7 +25,7 @@ class CohortsController < ApplicationController
    
   def update
     if @cohort.update(cohort_params)
-      redirect_to cohorts_path, notice: 'Your course was successfully edited'
+      redirect_to cohorts_path, notice: 'Your cohort was successfully edited'
     else
       render :edit
     end
@@ -36,7 +36,7 @@ class CohortsController < ApplicationController
 
   def destroy
     @cohort.delete
-    redirect_to cohorts_path, notice: 'Your course was successfully deleted'
+    redirect_to cohorts_path, notice: 'Your cohort was successfully deleted'
   end
 
   private
