@@ -2,30 +2,37 @@
 
 </div>
 
-<ul class="custom-nav nav nav-pills">
-  <li class="<%= active?(root_path) %>">
-    <%= link_to "Home", root_path %>
-  </li>
-  <li class="<%= active?(courses_path) %>">
-     <%= link_to "Courses", courses_path %>
-  </li>
-  <li class="<%= active?(new_course_path) %>">
-    <%= link_to "Add New Course", new_course_path, id: 'new_course_from_nav' %>
-  </li>
-  <%# <li class="<%= active?(cohorts_path) %>"> %>
-     <%# <%= link_to "Cohorts", cohorts_path %> 
-  </li>
-  <li class="nav-item dropdown">
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Account
-      </a>
-      <div class="dropdown-menu navbar-right" aria-labelledby="navbarDropdownMenuLink">
-        <%= link_to "ToDo: Admin Dashboard", root_path %>
-        <a class="dropdown-item" href="#">Another action</a>
-        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-      </div>
+<% if current_user %>
+  <ul class="custom-nav nav nav-pills">
+    <li class="<%= active?(root_path) %>">
+      <%= link_to "Home", root_path %>
     </li>
-  </li>
-</ul>
-
+    <li class="<%= active?(courses_path) %>">
+      <%= link_to "Courses", courses_path %>
+    </li>
+    <li class="<%= active?(new_course_path) %>">
+      <%= link_to "Add New Course", new_course_path, id: 'new_course_from_nav' %>
+    </li>
+    <%# <li class="<%= active?(cohorts_path) %>"> %>
+      <%# <%= link_to "Cohorts", cohorts_path %> 
+    </li>
+    <li class="nav-item dropdown">
+      <li class="dropdown pull-right">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Account<strong class="caret"></strong>
+        </a>
+        <ul class="dropdown-menu">
+          <% if current_user.try(:type) == 'AdminUser'%>
+          <li>
+            <%= link_to "Admin Dashboard", admin_root_path %>
+          </li>
+          <li class="divider">
+          </li>
+          <% end %>
+          <li>
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+          </li>
+        </ul>
+      </li>
+    </li>
+  </ul>
+<% end %>
