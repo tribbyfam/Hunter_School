@@ -1,15 +1,29 @@
 AdminUser.create(email: "admin@test.com", password: "123123", password_confirmation: "123123", first_name: "Marge", last_name: "Simpson", age: "44", education: "HS")
 
-10.times do |user|
-  User.create(first_name: "Mary", last_name: "Poppins", age: "33", education: "BS Chemistry", email: "mary#{user}@mary.com", password: "123123", password_confirmation: "123123")
-end
-puts "10 users were created"
+User.create(email: "elizabeth@test.com", password: "123123", password_confirmation: "123123", first_name: "Elizabeth", last_name: "Hoover", age: "33", education: "BS Chemistry", url: "assets/images/Elizabeth_hoover.png", course: "1", type: "instructor")
+User.create(email: "burns@test.com", password: "123123", password_confirmation: "123123", first_name: "Mr", last_name: "Burns", age: "33", education: "MS", url: "assets/images/Mr_Burns.jpg", course: "2", type: "instructor")
+User.create(email: "ned@test.com", password: "123123", password_confirmation: "123123", first_name: "Ned", last_name: "Flanders", age: "31", education: "BS", url: "assets/images/Ned_Flanders.png", course: "2", type: "instructor")
+User.create(email: "apu@test.com", password: "123123", password_confirmation: "123123", first_name: "Apu", last_name: "LongName", age: "32", education: "Culinary Art", url: "assets/images/Apu.png", course: "3", type: "instructor")
+User.create(email: "homer@test.com", password: "123123", password_confirmation: "123123", first_name: "Homer", last_name: "Simpson", age: "40", education: "Not clear", url: "assets/images/homer.jpg", course: "3", type: "instructor")
+User.create(email: "krusty@test.com", password: "123123", password_confirmation: "123123", first_name: "Krusty", last_name: "Clown", age: "45", education: "None", url: "assets/images/Krusty.png", course: "1", type: "instructor")
 
-10.times do |course|
-  Course.create!(name: "sei#{course}", hours: "35", instructor: "Dr.Evil")
-end
+User.create(email: "lisa@test.com", password: "123123", password_confirmation: "123123", first_name: "Lisa", last_name: "Simpson", age: "19", education: "HS", url: "assets/images/Lisa.jpg", cohort: "1")
+User.create(email: "milhouse@test.com", password: "123123", password_confirmation: "123123", first_name: "Milhouse", last_name: "Van Houten", age: "20", education: "HS", url: "assets/images/milhouse.png", cohort: "2")
+User.create(email: "allison@test.com", password: "123123", password_confirmation: "123123", first_name: "Allison", last_name: "Taylor", age: "22", education: "HS", url: "assets/images/Lisa.jpg", cohort: "3")
+User.create(email: "ralph@test.com", password: "123123", password_confirmation: "123123", first_name: "Ralph", last_name: "Waggum", age: "19", education: "HS", url: "assets/images/Ralph_Wiggum.png", cohort: "1")
+User.create(email: "edna@test.com", password: "123123", password_confirmation: "123123", first_name: "Edna", last_name: "Krabappel", age: "38", education: "MS", url: "assets/images/Edna_Krabappel.png", cohort: "2")
+User.create(email: "waylon@test.com", password: "123123", password_confirmation: "123123", first_name: "Waylon", last_name: "Smithers", age: "38", education: "BS", url: "assets/images/Waylon_Smithers.jpg", cohort: "3")
+User.create(email: "skinner@test.com", password: "123123", password_confirmation: "123123", first_name: "Mr.", last_name: "Skinner", age: "48", education: "MS", url: "assets/images/skinner.png", cohort: "2")
+User.create(email: "barney@test.com", password: "123123", password_confirmation: "123123", first_name: "Barney", last_name: "Grumble", age: "38", education: "HS", url: "assets/images/Barney-Gumble.jpg", cohort: "1")
 
-10.times do |cohorts|
-  Cohort.create!(name: "Methods #{course}")
-end
-puts "10 courses have been created"
+
+Course.create(name: "SEI", hours: "95")
+Course.create(name: "UIUX", hours: "85")
+Course.create(name: "WebDesign", hours: "90")
+
+Cohort.create(name: "Methods1", start_date: "2018-05-11", end_date: "2018-08-22", course_id: "1", instructor: "Mr. Burns")
+Cohort.create(name: "Methods2", start_date: "2018-06-11", end_date: "2018-08-12", course_id: "2", instructor: "Ned Flanders")
+Cohort.create(name: "Edgecase1", start_date: "2018-07-11", end_date: "2018-09-22", course_id: "1", instructor: "Ms. Hoover")
+Cohort.create(name: "Edgecase2", start_date: "2018-04-11", end_date: "2018-06-12", course_id: "3", instructor: "Apu")
+Cohort.create(name: "Function1", start_date: "2018-05-21", end_date: "2018-08-11", course_id: "3", instructor: "Homer Simpson")
+Cohort.create(name: "Function2", start_date: "2018-06-21", end_date: "2018-08-29", course_id: "1", instructor: "Krusty")
