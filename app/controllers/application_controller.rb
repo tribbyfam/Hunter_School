@@ -1,7 +1,10 @@
 class ApplicationController < ActionController::Base
+  include Pundit
+  protect_from_forgery with: :exception
   helper_method :full_name
   before_action :authenticate_user!
 
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   def full_name
     fname = User.first_name.capitalize
@@ -13,5 +16,10 @@ class ApplicationController < ActionController::Base
     if current_user.nil?
       redirect_to new_user_session_path
     end
+  end
+
+  def user_not_authorized
+    flash[:alert] = "You are not authorized to perform this action"
+    redirect_to(root_path)
   end
 end
