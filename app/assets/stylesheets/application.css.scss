@@ -5,9 +5,20 @@
 @import "gritter";
 @import "bourbon";
 
+
+
 .custom-nav {
   background-color: rgb(95, 29, 95);
   color: white;
   margin-top: 75px;
   font-size: 1em;
+}
+
+.index-icons {
+  font-size: 1.5em;
+}
+
+.index-icons:hover {
+  text-decoration: none;
+  color: rgb(95, 29, 95);
 }

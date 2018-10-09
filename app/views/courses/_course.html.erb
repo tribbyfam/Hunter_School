@@ -16,17 +16,10 @@
       <%= current_user.first_name %>
     </td>
     <td> 
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-4">
-          <span class="label label-success"><%= link_to 'Edit', edit_course_path(course), id: "edit_#{course.id}" if policy(course).update? %></span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <span class="label label-danger"><%= link_to 'Delete', course_path(course), method: :delete, id: "#{course.id}", data: { confirm: 'Are you sure?' } %></span>
-        </div>
-      </div>
-    </div>
+      <span><%= link_to '', edit_course_path(course), id: "edit_#{course.id}", class: 'glyphicon glyphicon-pencil index-icons' if policy(course).update? %></span>
+    </td> 
+    <td>
+      <span><%= link_to '', course_path(course), method: :delete, class: 'glyphicon glyphicon-trash index-icons', id: "#{course.id}", data: { confirm: 'Are you sure?' } %></span>
+    </td>
   </tr>
       
