@@ -19,17 +19,12 @@
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-4">
-          <%= link_to 'Edit', edit_course_path(course), id: "edit_#{course.id}" %>
+          <span class="label label-success"><%= link_to 'Edit', edit_course_path(course), id: "edit_#{course.id}" %></span>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4">
-          <%= link_to 'Delete', course_path(course), method: :delete, id: "#{course.id}", data: { confirm: 'Are you sure?' } %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <%# <%= link_to 'Cohorts', cohort_path(cohort), id: "#{cohort.id}" %> %>
+          <span class="label label-danger"><%= link_to 'Delete', course_path(course), method: :delete, id: "#{course.id}", data: { confirm: 'Are you sure?' } %></span>
         </div>
       </div>
     </div>
