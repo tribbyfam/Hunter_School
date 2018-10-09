@@ -20,6 +20,7 @@ class CoursesController < ApplicationController
   end
 
   def show
+    @cohort = Cohort.all
   end
 
   def update

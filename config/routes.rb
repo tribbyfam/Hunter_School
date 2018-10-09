@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
       root to: "users#index"
     end
+    
   resources :cohorts
   resources :courses
   devise_for :users, skip: [:registration]
