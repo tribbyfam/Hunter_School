@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2018_10_03_204910) do
     t.string "education"
     t.string "url"
     t.string "type"
+    t.integer "salary"
     t.bigint "cohort_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
