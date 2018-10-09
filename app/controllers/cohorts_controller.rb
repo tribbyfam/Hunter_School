@@ -11,6 +11,7 @@ class CohortsController < ApplicationController
 
   def create
     @cohort = Cohort.create(cohort_params) 
+    puts "checking for cohort"
 
     if @cohort
 			redirect_to cohorts_path, notice: 'Your cohort was successfully created'

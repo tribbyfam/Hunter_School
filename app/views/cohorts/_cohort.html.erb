@@ -7,10 +7,10 @@
       <%= cohort.name %>
     </td>
     <td>
-      <%= cohort.start_date %>
+      <%= cohort.start_date.strftime("%d/%m/%Y") %>
     </td>
     <td>
-      <%= cohort.end_date %>
+      <%= cohort.end_date.strftime("%d/%m/%Y") %>
     </td>
     <td>
       <%= cohort.instructor %>

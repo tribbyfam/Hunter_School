@@ -37,8 +37,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :age
       t.string :education
       t.string :url
-      t.bigint :course
-      t.bigint :cohort
+      t.string :type
+      t.bigint :cohort_id
 
       t.timestamps null: false
     end

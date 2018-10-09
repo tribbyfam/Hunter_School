@@ -6,6 +6,10 @@ class ApplicationPolicy
     @record = record
   end
 
+  def pundit_user
+    User.find_by(:type)
+  end
+
   def index?
     false
   end

@@ -1,3 +1,5 @@
 class Cohort < ApplicationRecord
-  belongs_to :user
+  has_many :users
+  has_one :instructor, -> { where(type: 'Instructor') }, :class_name => "User"
+  
 end
