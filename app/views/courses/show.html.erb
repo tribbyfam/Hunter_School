@@ -1,3 +1,18 @@
-<h2>all courses</h2>
-<%= @course.inspect %>
+<div>
+  <h2><%= @course.name %></h2>
+</div>
+
+<div class="well">
+  <div>
+    <h3><span>Course Name:</span> <%= @course.name %></h3>
+  <div>
+    <h3><span>Course Hours:</span> <%= @course.hours %></h3>
+  </div>
+  <div>
+    <%# <h3><span>Cohorts:</span> <%= @cohorts.name %></h3> %>
+  </div>
+</div>
+
+<%= link_to "Edit", edit_course_path(@course), class: "btn btn-primary" if policy(@course).update? %>
+
 
