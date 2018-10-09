@@ -23,6 +23,6 @@
     </tr>
   </thead>
   <tbody>
-    <%= render @courses %>
+    <%= render partial: "course", locals: {courses: @courses} %>
   </tbody>
 </table>

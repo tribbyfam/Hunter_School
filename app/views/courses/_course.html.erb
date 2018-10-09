@@ -1,25 +1,26 @@
 
+<% @courses.each do |course| %>
   <tr>
     <td>
-      <%= course.id %>
+      <%=  course.id %>
     </td>
     <td>
-      <%= link_to course.name, course %>
+      <%= link_to  course.name, course %>
     </td>
     <td>
-      <%= course.hours %>
+      <%=  course.hours %>
     </td>
     <td>
-      <%= course.created_at.strftime("%d/%m/%Y") %>
+      <%=  course.created_at.strftime("%d/%m/%Y") %>
     </td>
     <td>
-      <%= current_user.first_name %>
+      <%= link_to 'Cohorts', cohorts_path %>
     </td>
     <td> 
-      <span><%= link_to '', edit_course_path(course), id: "edit_#{course.id}", class: 'glyphicon glyphicon-pencil index-icons' if policy(course).update? %></span>
+      <span><%= link_to '', edit_course_path(course), id: "edit_#{course.id}", class: 'glyphicon glyphicon-pencil index-icons' %></span>
     </td> 
     <td>
       <span><%= link_to '', course_path(course), method: :delete, class: 'glyphicon glyphicon-trash index-icons', id: "#{course.id}", data: { confirm: 'Are you sure?' } %></span>
     </td>
   </tr>
-      
+<% end %>    

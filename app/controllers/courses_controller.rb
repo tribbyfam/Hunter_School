@@ -2,19 +2,19 @@ class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
   
   def index
-    @courses = Course.courses_for current_user
+    # @courses = Course.courses_for current_user
+    @courses = Course.all
+
   end
 
   def new
     @course = Course.new
-    @user_id = current_user.id
   end
   
   def create
     @course = Course.create(
       name: params[:course][:name],
       hours: params[:course][:hours],
-      user_id: current_user.id
     ) 
     redirect_to courses_path, notice: 'Your course was successfully created'
   end
