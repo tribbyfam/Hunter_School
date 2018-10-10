@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://localhost:3000/admin/users?search=homer -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="ROBOTS" content="NOODP">
+  <meta name="viewport" content="initial-scale=1">
+  <title>
+      Users
+ - School2
+  </title>
+  
+  <link rel="stylesheet" media="screen" href="./Users - School2_files/application.self-a659d92c2c940ecc2f75d72f253da5abeab2fbc2a6c9f74d365a027b393584a0.css">
+
+
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="IoSKD3rf/YByoqBHu+0pwNWtvNf+Ka36xB3mnO6DjpgrbXLlqPPlYyZnK6usR4sbQ0ZOQbY3OqfxZ9pS4Soiwg==">
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="icon-cancel" viewBox="0 0 48 48">
+    <path fill-rule="evenodd" d="M24 19.757l-8.485-8.485c-.784-.783-2.047-.782-2.827 0l-1.417 1.416c-.777.777-.78 2.046.002 2.827L19.757 24l-8.485 8.485c-.783.784-.782 2.047 0 2.827l1.416 1.417c.777.777 2.046.78 2.827-.002L24 28.243l8.485 8.485c.784.783 2.047.782 2.827 0l1.417-1.416c.777-.777.78-2.046-.002-2.827L28.243 24l8.485-8.485c.783-.784.782-2.047 0-2.827l-1.416-1.417c-.777-.777-2.046-.78-2.827.002L24 19.757zM24 47c12.703 0 23-10.297 23-23S36.703 1 24 1 1 11.297 1 24s10.297 23 23 23z"></path>
+  </symbol>
+
+  <symbol id="icon-eyeglass" viewBox="0 0 48 48">
+    <path d="M27.885 32.515c-2.864 1.966-6.333 3.116-10.07 3.116C7.976 35.63 0 27.656 0 17.817 0 7.976 7.976 0 17.816 0S35.63 7.976 35.63 17.816c0 3.736-1.15 7.205-3.115 10.07l14.53 14.53c1.278 1.277 1.275 3.352 0 4.628-1.28 1.278-3.353 1.278-4.63 0l-14.53-14.53zm-10.07-3.736c6.056 0 10.964-4.91 10.964-10.964 0-6.055-4.91-10.964-10.964-10.964-6.055 0-10.964 4.91-10.964 10.964 0 6.055 4.91 10.963 10.964 10.963z"></path>
+  </symbol>
+
+  <symbol id="icon-up-caret" viewBox="0 0 48 48">
+    <path d="M2.988 33.02c-1.66 0-1.943-.81-.618-1.824l20-15.28c.878-.672 2.31-.67 3.188 0l20.075 15.288c1.316 1.003 1.048 1.816-.62 1.816H2.987z"></path>
+  </symbol>
+</svg>
+
+
+  <div class="app-container">
+    
+<nav class="navigation" role="navigation">
+    <a class="navigation__link navigation__link--active" href="http://localhost:3000/admin/users">Users</a>
+    <a class="navigation__link navigation__link--inactive" href="http://localhost:3000/admin/cohorts">Cohorts</a>
+    <a class="navigation__link navigation__link--inactive" href="http://localhost:3000/admin/courses">Courses</a>
+    <a class="navigation__link navigation__link--inactive" href="http://localhost:3000/admin/admin_users">Admin Users</a>
+</nav>
+
+    <main class="main-content" role="main">
+      
+      
+
+<header class="main-content__header" role="banner">
+  <h1 class="main-content__page-title" id="page-title">
+      Users
+
+  </h1>
+
+    <form class="search" role="search">
+  <label class="search__label" for="search">
+    <svg class="search__eyeglass-icon" role="img">
+      <title>
+        Search Users
+      </title>
+      <use xlink:href="#icon-eyeglass"></use>
+    </svg>
+  </label>
+
+  <input class="search__input" id="search" type="search" name="search" placeholder="Search Users" value="homer">
+
+  <a class="search__clear-link" href="http://localhost:3000/admin/users">
+    <svg class="search__clear-icon" role="img">
+      <title>Clear search</title>
+      <use xlink:href="#icon-cancel"></use>
+    </svg>
+</a></form>
+
+
+  <div>
+    <a class="button" href="http://localhost:3000/admin/users/new">New user</a>
+  </div>
+</header>
+
+<section class="main-content__body main-content__body--flush">
+  
+<table aria-labelledby="page-title">
+  <thead>
+    <tr>
+        <th class="cell-label
+        cell-label--number
+        cell-label--false" scope="col" role="columnheader" aria-sort="none">
+        <a href="http://localhost:3000/admin/users?search=homer&amp;user%5Bdirection%5D=asc&amp;user%5Border%5D=id">
+        Id
+</a>        </th>
+        <th class="cell-label
+        cell-label--string
+        cell-label--false" scope="col" role="columnheader" aria-sort="none">
+        <a href="http://localhost:3000/admin/users?search=homer&amp;user%5Bdirection%5D=asc&amp;user%5Border%5D=email">
+        Email
+</a>        </th>
+        <th class="cell-label
+        cell-label--string
+        cell-label--false" scope="col" role="columnheader" aria-sort="none">
+        <a href="http://localhost:3000/admin/users?search=homer&amp;user%5Bdirection%5D=asc&amp;user%5Border%5D=type">
+        Type
+</a>        </th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr class="js-table-row" tabindex="0" role="link" data-url="/admin/users/6">
+          <td class="cell-data cell-data--number">
+              <a href="http://localhost:3000/admin/users/6" class="action-show">
+                
+6
+
+              </a>
+          </td>
+          <td class="cell-data cell-data--string">
+              <a href="http://localhost:3000/admin/users/6" class="action-show">
+                
+homer@test.com
+
+              </a>
+          </td>
+          <td class="cell-data cell-data--string">
+              <a href="http://localhost:3000/admin/users/6" class="action-show">
+                
+
+
+              </a>
+          </td>
+
+          <td><a class="action-edit" href="http://localhost:3000/admin/users/6/edit">Edit</a></td>
+
+          <td><a class="text-color-red" data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="http://localhost:3000/admin/users/6">Destroy</a></td>
+      </tr>
+  </tbody>
+</table>
+
+
+  
+</section>
+
+    </main>
+  </div>
+
+  
+  <script src="./Users - School2_files/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js"></script>
+<script src="./Users - School2_files/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js"></script>
+<script src="./Users - School2_files/selectize.self-87442737bcef42a11dcd9e8098ade1921d4852a0eac350677ddfa006963bcbdb.js"></script>
+<script src="./Users - School2_files/moment.self-dbfdfe43590c611f0c0daa853cd06098b822a96263c92920d70a8bc7f884e59a.js"></script>
+<script src="./Users - School2_files/datetime_picker.self-953135ed994cc31cc9cfec48a266ddfc2017dce124e3a2d0503f69d3c31ed8be.js"></script>
+<script src="./Users - School2_files/date_time_picker.self-d779ef5a8e8e10d2fa290fe533e6af8cdc4c4b9e92ce0752d20b6c01822272e0.js"></script>
+<script src="./Users - School2_files/has_many_form.self-1f25789b95907cf69cffca6b436b523b4df0d94bdf8903ededdeced0ac7147d7.js"></script>
+<script src="./Users - School2_files/table.self-a3d8351581fece8850ef6f595fe6153bf4eacf098c075e5588de2d07ae56d4ba.js"></script>
+<script src="./Users - School2_files/application.self-d088784b7ecb87f1ea17e6f982fa968ffefcc07b79de6ecc548fc00242868da6.js"></script>
+
+
+
+
+
+
+</body></html>
