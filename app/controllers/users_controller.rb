@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       password: params[:user][:password]
     )
     session[:user_id] = user.id
-    redirect_to users_path
+    redirect_to admin_users_path
   end
 
   def edit

@@ -17,10 +17,5 @@ module Admin
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
-    def full_name
-      fname = User.first_name.capitalize
-      lname = User.last_name.capitalize
-      full_name = "fname" + " " + "lname"
-    end
   end
 end

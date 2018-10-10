@@ -1,0 +1,14 @@
+<% current_user? %>
+<div class="media">
+  <div class="media-left media-top">
+    <a href="#">
+      <img class="media-object" src="<%= current_user.url %>" alt="Marge Simpson">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Profile</h4><hr>
+    <%= current_user.full_name %> <hr>
+    <%= current_user.full_name %> <hr>
+    <%= current_user.full_name %> <hr>
+  </div>
+</div>

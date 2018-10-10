@@ -24,6 +24,8 @@ class CoursesController < ApplicationController
   end
 
   def update
+    authorize @course 
+    
     if @course.update(course_params)
       redirect_to courses_path, notice: 'Your course was successfully edited'
     else
@@ -32,6 +34,7 @@ class CoursesController < ApplicationController
   end
 
   def edit
+    authorize @course 
   end
 
   def destroy

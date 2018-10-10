@@ -8,15 +8,16 @@ class CohortDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    user: Field::BelongsTo.with_options(searchable: false),
-    id: Field::Number.with_options(searchable: false),
-    name: Field::String.with_options(searchable: true),
-    start_date: Field::DateTime.with_options(searchable: false),
-    end_date: Field::DateTime.with_options(searchable: false),
-    course_id: Field::Number.with_options(searchable: false),
-    created_at: Field::DateTime.with_options(searchable: false),
-    updated_at: Field::DateTime.with_options(searchable: false),
-    instructor: Field::String.with_options(searchable: true),
+    users: Field::HasMany,
+    instructor: Field::HasOne,
+    id: Field::Number,
+    name: Field::String,
+    start_date: Field::DateTime,
+    end_date: Field::DateTime,
+    course_id: Field::Number,
+    user_id: Field::Number,
+    created_at: Field::DateTime,
+    updated_at: Field::DateTime,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -25,36 +26,38 @@ class CohortDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :name,
-    :start_date,
-    :end_date,
+    :users,
     :instructor,
+    :id,
+    :name,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :user,
+    :users,
+    :instructor,
     :id,
     :name,
     :start_date,
     :end_date,
     :course_id,
+    :user_id,
     :created_at,
     :updated_at,
-    :instructor,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :user,
+    :users,
+    :instructor,
     :name,
     :start_date,
     :end_date,
     :course_id,
-    :instructor,
+    :user_id,
   ].freeze
 
   # Overwrite this method to customize how cohorts are displayed
