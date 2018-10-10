@@ -36,4 +36,5 @@ Student.create(email: "edna@test.com", password: "123123", password_confirmation
 Student.create(email: "waylon@test.com", password: "123123", password_confirmation: "123123", first_name: "Waylon", last_name: "Smithers", age: "38", education: "BS", url: "assets/images/Waylon_Smithers.jpg", cohort_id: "6")
 Student.create(email: "skinner@test.com", password: "123123", password_confirmation: "123123", first_name: "Mr.", last_name: "Skinner", age: "48", education: "MS", url: "assets/images/skinner.png", cohort_id: "1")
 Student.create(email: "barney@test.com", password: "123123", password_confirmation: "123123", first_name: "Barney", last_name: "Grumble", age: "38", education: "HS", url: "assets/images/Barney-Gumble.jpg", cohort_id: "2")
+
 puts 'regular users'

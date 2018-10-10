@@ -13,23 +13,28 @@
       <%= cohort.end_date.strftime("%d/%m/%Y") %>
     </td>
     <td>
-      <%= cohort.instructor %>
+      <%# <%= cohort.id.user_id.first_name %> %>
     </td>
     <td> 
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-4">
-          <%= link_to 'Edit', edit_cohort_path(cohort), id: "edit_#{cohort.id}" %>
+          <%= link_to 'Edit', edit_cohort_path(cohort), id: "edit_#{cohort.id}", class: 'glyphicon glyphicon-pencil index-icons' %>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4">
-          <%= link_to 'Delete', cohort_path(cohort), method: :delete, id: "#{cohort.id}" %>
+          <%= link_to '', cohort_path(cohort), method: :delete, id: "#{cohort.id}", class: 'glyphicon glyphicon-trash index-icons' %>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4">
-          <%# <%= link_to 'Students', students_path %> %>
+          <%= link_to 'Create New', new_cohort_path(cohort), id: "#{cohort.id}", class: 'glyphicon glyphicon-plus index-icons' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%# <%= link_to 'Students', users_path(users), id: "#{cohort.id}", class: 'glyphicon glyphicon-folder-open index-icons' %> %>
         </div>
       </div>
     </div>
