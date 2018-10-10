@@ -1,0 +1,25 @@
+
+  <tr>
+    <td>
+      <%= @course.name %>
+    </td>
+    <td>
+      <%= @course.hours %>
+    </td>
+    <td>
+      <% @course.cohorts.each do |cohort| %>
+      <h5><%= cohort.name %></h5> <hr>
+      <% end %>
+    </td>
+    <td>
+     <span><%= link_to "Edit", edit_course_path(@course), class: "glyphicon glyphicon-pencil index-icons" %></span>
+    </td>
+    <td>
+      <%# <span><%= link_to '', course_path(@course), method: :delete, class: 'glyphicon glyphicon-trash index-icons', id: "#{course.id}", data: { confirm: 'Are you sure?' } %></span> %>
+    </td>
+    <td> 
+      <span><%= link_to "Add Cohort", new_cohort_path(@cohort), class: 'glyphicon glyphicon-plus index-icons' %></span>
+    </td>  
+  </tr>
+
+
