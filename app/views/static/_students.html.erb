@@ -1,0 +1,20 @@
+<h2>Hi students</h2>
+
+
+
+<% @users.each do |user| %>
+
+<div class="media">
+  <div class="media-left media-top">
+    <a href="#">
+      <%= image_tag(user.email, size: "46") %>
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Profile</h4><hr>
+    <%= user.first_name %> <hr>
+    <%= user.last_name %> <hr>
+    <%= user.age %> <hr>
+  </div>
+</div>
+<% end %>

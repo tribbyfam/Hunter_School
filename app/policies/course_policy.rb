@@ -18,7 +18,7 @@ class CoursePolicy < ApplicationPolicy
   end
 
   def update?
-     admin_types.include?(user.type)
+    record.user_id == user.id || admin_types.include?(user.type)
   end
 
   def admin?
