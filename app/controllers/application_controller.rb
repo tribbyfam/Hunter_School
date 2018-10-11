@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
     full_name = "fname" + " " + "lname"
   end
 
+  def admin_types
+    ['AdminUser']
+  end
+
   private
   
   def user_not_authorized

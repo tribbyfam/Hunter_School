@@ -8,7 +8,7 @@
 
 .custom-nav {
   background-color: rgb(95, 29, 95);
-  color: white;
+  color: white !important;
   margin-top: 25px;
   font-size: 0.8em;
 }
@@ -33,4 +33,23 @@
   border-radius: 10px;
   border: 1px solid black;
   margin: 1.2em;
+}
+
+.profile-info {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: rgb(95, 29, 95);
+  color: white;
+  margin: 10px;
+  padding: 5px 5px 5px 25px;
+}
+
+.profile-info:hover {
+  background-color: rgb(56, 17, 56);
+}
+
+.tb-header {
+  background-color: rgb(95, 29, 95);
+  color: white;
 }

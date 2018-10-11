@@ -4,21 +4,17 @@
 
 <table class="table table-hover table-striped">
   <thead>
-    <tr>
+    <tr class="tb-header">
       <th>
-        Course Name:
+        Course:
       </th>
       <th>
         Hours:
       </th>
       <th>
-        Cohorts:
-      </th>
-      <th>
-      </th>
-      <th>
       </th>
     </tr>
+    <hr>
   </thead>
   <tbody>
     <%= render partial: "show", locals: {courses: @courses} %>

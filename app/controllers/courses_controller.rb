@@ -34,7 +34,7 @@ class CoursesController < ApplicationController
   end
 
   def edit
-    authorize @course 
+    # authorize @course 
   end
 
   def destroy
