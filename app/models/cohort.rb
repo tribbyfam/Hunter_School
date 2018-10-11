@@ -1,6 +1,6 @@
 class Cohort < ApplicationRecord
-  has_many :cohortstousers
-  has_many :users, through: :cohortstousers
+  has_many :cohort_users
+  has_many :users, through: :cohort_users
   has_one :instructor, -> { where(type: 'Instructor') }, :class_name => "User"
   
 end

@@ -10,16 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_171526) do
+ActiveRecord::Schema.define(version: 2018_10_11_205614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "CohortsToUsers", force: :cascade do |t|
-    t.string "user_id"
-    t.string "cohort_id"
+  create_table "cohort_users", force: :cascade do |t|
+    t.bigint "cohort_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["cohort_id"], name: "index_cohort_users_on_cohort_id"
+    t.index ["user_id"], name: "index_cohort_users_on_user_id"
   end
 
   create_table "cohorts", force: :cascade do |t|
@@ -58,4 +60,6 @@ ActiveRecord::Schema.define(version: 2018_10_10_171526) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cohort_users", "cohorts"
+  add_foreign_key "cohort_users", "users"
 end

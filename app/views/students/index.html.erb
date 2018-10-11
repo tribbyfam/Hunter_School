@@ -1,22 +1,22 @@
 <h2>Students</h2>
 
-<% @cohorts.each do |cohort| %>
 
 <div class="container-fluid">
   <div class="row media">
     <div class="col-md-2">
-    
+    <% @users.each do |user| %>
       <div class="media-left media-top">
         <a href="#">
-          <%= image_tag(cohort.user.email, size: "66", class: "photo") %>
+          <%= image_tag(@cohort.user.email, size: "66", class: "photo") %>
         </a>
       </div>
     </div>
     <div class="col-md-9 profile-info">
-      <p><span>Name: </span><%= cohort.student.full_name %></p>  
-      <p><span>Age: </span><%= cohort.student.age %></p>
-      <p><span>Education: </span><%= cohort.student.education %></p>
+      <p><span>Name: </span><%= @cohort.user.full_name</p>   %>
+      <p><span>Age: </span><%= @cohort.user.age %></p>
+      <p><span>Education: </span><%= @cohort.user.education %></p>
     </div>
   </div>
+
 </div>
 <% end %>
