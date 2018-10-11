@@ -15,26 +15,25 @@
       <th>
       </th>
     </tr>
-    <% @course.cohorts.each do |cohort| %>
-      <tr>
-        
-        <td>
-          <h5><%= cohort.name %></h5> <hr>
-        </td>
-        <td>
-          <%= link_to "", edit_course_path(@course), class: "glyphicon glyphicon-pencil index-icons" %>
-        </td>
-        <td>
-          <%= link_to '', course_path(@course), method: :delete, class: 'glyphicon glyphicon-trash index-icons', id: "#{@course.id}", data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-    <% end %>
-    <%# <button> Add New Cohort<% link_to new_cohort_path(@cohort) %>
-    </button> %>
-    
-    <td> 
-      <%= link_to "Add New Cohort", new_cohort_path(@cohort), class: 'glyphicon glyphicon-plus index-icons' %>
-    </td>  
+      <% @course.cohorts.each do |cohort| %>
+    <tr>     
+      <td>
+        <h5><%= cohort.name %></h5> <hr>
+      </td>
+      <td>
+        <%= link_to "", edit_course_path(@course), class: "glyphicon glyphicon-pencil index-icons" %>
+      </td>
+      <td>
+        <%= link_to '', course_path(@course), method: :delete, class: 'glyphicon glyphicon-trash index-icons', id: "#{@course.id}", data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+      <% end %>
   </tr>
+  <tr>
+    <button class="btn btn-warning btn-lg btn-block"> 
+      <%= link_to "Add New Cohort", new_cohort_path(@cohort), class: 'glyphicon glyphicon-plus index-icons' %>
+    </button>  
+  </tr>
+  
 
 

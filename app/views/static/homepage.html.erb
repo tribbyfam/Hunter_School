@@ -7,7 +7,7 @@
    <% if admin_types.include?(current_user.try(:type)) %>
     <%= render "admin" %>
    <%# <% elsif truevalue %> %>
-    <%# <%= render 'instructor' %> %>
+    <%# <%= render 'cohorts' %> %>
     <% else %>
       <%= render "students" %>
    <% end %>
