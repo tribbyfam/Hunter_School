@@ -1,8 +1,21 @@
-<H2>Hi admin</H2>
 
-<div>
+<% @users.each do |user| %>
 
+<div class="container-fluid">
+  <div class="row media">
+    <div class="col-md-2">
+      <div class="media-left media-top">
+        <a href="#">
+          <%= image_tag(user.email, size: "66", class: "photo") %>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-9 profile-info">
+      <p><span>Name: </span><%= user.full_name %></p>  
+      <p><span>Age: </span><%= user.age %></p>
+      <p><span>Education: </span><%= user.education %></p>
+      <p><span>Salary: </span><%= user.salary %></p>
+    </div>
+  </div>
 </div>
-<div>
-
-</div>
+<% end %>

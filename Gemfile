@@ -64,9 +64,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'jquery-rails'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.1.3'
 gem 'gritter', '~> 1.2'
 gem 'administrate', '~> 0.11.0'
 gem 'bourbon', '~> 5.1'
 gem 'pundit', '~> 2.0'
 gem 'bootstrap-sass'
+gem 'bootstrap-glyphicons'

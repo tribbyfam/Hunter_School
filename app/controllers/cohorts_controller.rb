@@ -3,6 +3,7 @@ class CohortsController < ApplicationController
 
   def index
     @cohorts = Cohort.all
+    @user = current_user
   end
 
   def new

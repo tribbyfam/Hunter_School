@@ -3,14 +3,28 @@
 @import "courses.css";
 @import "gritter";
 @import "bourbon";
+@import "bootstrap/glyphicons";
 
 
+%mybackground {
+  background-color: rgb(89, 50, 133);
+}
 
 .custom-nav {
-  background-color: rgb(95, 29, 95);
-  color: white !important;
+  background-color: rgb(89, 50, 133);
+  color: white;
+  text-decoration: none;
   margin-top: 25px;
   font-size: 0.8em;
+}
+
+.custom-nav:hover {
+  background-color: rgb(71, 39, 107);
+}
+
+.nav-toggle {
+  color: orange !important;
+  background-color: orange;
 }
 
 .nav-li {
@@ -24,7 +38,7 @@
 
 .index-icons:hover {
   text-decoration: none;
-  color: rgb(95, 29, 95);
+  color: rgb(89, 50, 133);
 }
 
 .photo {
@@ -39,17 +53,17 @@
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  background-color: rgb(95, 29, 95);
+  background-color: rgb(89, 50, 133);
   color: white;
   margin: 10px;
   padding: 5px 5px 5px 25px;
 }
 
 .profile-info:hover {
-  background-color: rgb(56, 17, 56);
+  background-color: rgb(71, 39, 107);
 }
 
 .tb-header {
-  background-color: rgb(95, 29, 95);
+  background-color: rgb(89, 50, 133);
   color: white;
 }

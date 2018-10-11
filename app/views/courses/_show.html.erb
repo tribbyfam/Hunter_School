@@ -22,10 +22,10 @@
           <h5><%= cohort.name %></h5> <hr>
         </td>
         <td>
-          <%= link_to "Edit", edit_course_path(@course), class: "glyphicon glyphicon-pencil index-icons" %>
+          <%= link_to "", edit_course_path(@course), class: "glyphicon glyphicon-pencil index-icons" %>
         </td>
         <td>
-          <%= link_to 'Delete', course_path(@course), method: :delete, class: 'glyphicon glyphicon-trash index-icons', id: "#{@course.id}", data: { confirm: 'Are you sure?' } %>
+          <%= link_to '', course_path(@course), method: :delete, class: 'glyphicon glyphicon-trash index-icons', id: "#{@course.id}", data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
     <% end %>
@@ -33,7 +33,7 @@
     </button> %>
     
     <td> 
-      <%= link_to "Add Cohort", new_cohort_path(@cohort), class: 'glyphicon glyphicon-plus index-icons' %>
+      <%= link_to "Add New Cohort", new_cohort_path(@cohort), class: 'glyphicon glyphicon-plus index-icons' %>
     </td>  
   </tr>
 
