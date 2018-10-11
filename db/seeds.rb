@@ -37,6 +37,7 @@ User.create(email: "edna@test.com", password: "123123", password_confirmation: "
 User.create(email: "waylon@test.com", password: "123123", password_confirmation: "123123", first_name: "Waylon", last_name: "Smithers", age: "38", education: "BS", url: "assets/images/Waylon_Smithers.jpg")
 User.create(email: "skinner@test.com", password: "123123", password_confirmation: "123123", first_name: "Mr.", last_name: "Skinner", age: "48", education: "MS", url: "assets/images/skinner.png")
 User.create(email: "barney@test.com", password: "123123", password_confirmation: "123123", first_name: "Barney", last_name: "Grumble", age: "38", education: "HS", url: "assets/images/Barney-Gumble.jpg")
+User.create(email: "bart@test.com", password: "123123", password_confirmation: "123123", first_name: "Bart", last_name: "Simpson", age: "28", education: "BS", url: "assets/images/bart.jpg")
 
 puts 'regular users'
 

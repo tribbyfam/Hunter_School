@@ -12,13 +12,18 @@ class CoursePolicy < ApplicationPolicy
       if user.admin?
         scope.all
       else
-        scope.where(published: true)
       end
     end
   end
 
   def update?
-    record.user_id == user.id || admin_types.include?(user.type)
+    record.user_id == admin_types.include?(user.type)
+  end
+
+  private
+
+  def user_or_admin
+    record.user_id == admin?
   end
 
   def admin?

@@ -10,7 +10,7 @@ class CohortsController < ApplicationController
   end
 
   def create
-
+  
     @cohort = Cohort.create(cohort_params) 
     puts "checking for cohort"
 
@@ -26,7 +26,6 @@ class CohortsController < ApplicationController
   end
    
   def update
-    authorize @cohort
 
     if @cohort.update(cohort_params)
       redirect_to cohorts_path, notice: 'Your cohort was successfully edited'
@@ -36,7 +35,7 @@ class CohortsController < ApplicationController
   end
   
   def edit
-    authorize @cohort
+  
   end
 
   def destroy

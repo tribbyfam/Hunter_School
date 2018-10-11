@@ -1,32 +1,30 @@
-<div class="logo">
 
-</div>
   <ul class="custom-nav nav nav-pills">
-    <li class="<%= active?(root_path) %>">
+    <li class="<%= active?(root_path) %> nav-li">
       <%= link_to "Home", root_path %>
-    </li><hr>
-    <li class="<%= active?(courses_path) %>">
+    </li>
+    <li class="<%= active?(courses_path)%> nav-li">
       <%= link_to "Courses", courses_path %>
-    </li><hr>
-    <li class="<%= active?(cohorts_path) %>">
+    </li>
+    <li class="<%= active?(cohorts_path)%> nav-li">
       <%= link_to "Cohorts", cohorts_path %>
-    </li><hr>
-     <li>
+    </li>
+     <li class=" nav-li">
       <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-    </li><hr>
+    </li>
     <li class="nav-item dropdown">
-      <li class="dropdown pull-right">
+      <li class="dropdown pull-right nav-li">
         <a class="dropdown-toggle" href="#" data-toggle="dropdown">Account<strong class="caret"></strong>
         </a>
         <ul class="dropdown-menu">
           <% if current_user.try(:type) == 'AdminUser' %>
-          <li>
+          <li class="nav-li">
             <%= link_to "Admin Dashboard", admin_root_path %>
           </li>
           <li class="divider">
           </li>
           <% end %>
-          <li>
+          <li class="nav-li">
             <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
           </li>
         </ul>
@@ -34,3 +32,6 @@
     </li>
   </ul>
 
+<hr>
+
+ 

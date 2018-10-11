@@ -9,8 +9,13 @@
 .custom-nav {
   background-color: rgb(95, 29, 95);
   color: white;
-  margin-top: 75px;
-  font-size: 1em;
+  margin-top: 25px;
+  font-size: 0.8em;
+}
+
+.nav-li {
+  margin: 0.5em;
+  padding: 0.5em;
 }
 
 .index-icons {
@@ -20,4 +25,12 @@
 .index-icons:hover {
   text-decoration: none;
   color: rgb(95, 29, 95);
+}
+
+.photo {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 1.2em;
 }
