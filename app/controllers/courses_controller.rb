@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
   def index
     # @courses = Course.courses_for current_user
     @courses = Course.all
-
+    @users = User.all
   end
 
   def new

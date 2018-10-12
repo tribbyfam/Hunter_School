@@ -1,30 +1,8 @@
 
-  <tr>
-    <td>
-      <%= @course.name %>
-    </td>
-    <td>
-      <%= @course.hours %>
-    </td> 
-    <td>
-    </td>
-    <td>
-    </td>
-    <tr class="tb-header">
-      <th>
-        Cohorts:
-      </th>
-      <th>
-      </th>
-      <th>
-      </th>
-      <th>
-      </th>
-    </tr>
-      <% @course.cohorts.each do |cohort| %>
-    <tr>     
+  <% @course.cohorts.each do |cohort| %>
+    <tr>
       <td>
-        <h5><%= cohort.name %></h5>
+        <%= cohort.name %>
       </td>
       <td>
       </td>
@@ -35,13 +13,13 @@
         <%= link_to '', course_path(@course), method: :delete, class: 'glyphicon glyphicon-trash index-icons delete', id: "#{@course.id}", data: { confirm: 'Are you sure?' } %>
       </td>
     </tr>
-      <% end %>
-    <tr>
-      <td>
-        <%= link_to "", new_cohort_path(@cohort), class: 'glyphicon glyphicon-plus index-icons btn btn-warning btn-lg' %>
-      </td>
-    </tr>
-  </tr>
+  <% end %>
+  
+    <div class="row">
+      <div class="col md-3">
+        <span><%= link_to "", new_cohort_path(@cohort), class: 'glyphicon glyphicon-plus index-icons btn btn-warning btn-lg' %></span>
+      </div>
+    </div>
   
   
 

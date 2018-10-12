@@ -1,7 +1,7 @@
 <hr class="bg-warning"><h2>Students</h2><hr class="bg-warning">
 
 <% @cohort.users.each do |user| %>
-<div class="container-fluid profile-info">
+<div class="container-fluid ml-4 mt-1">
   <div class="row media">
     <div class="col-md-2">
       <div class="media-left media-top">
@@ -10,15 +10,15 @@
         </a>
       </div>
     </div>
-    <div class="col-md-9 profile-info">
+    <div class="col-md-9 profile-info ml-5">
       <p><span>Name: </span><%= user.full_name %></p>
       <p><span>Age: </span><%= user.age %></p>
       <p><span>Education: </span><%= user.education %></p>
       <div class="row">
         <div class="col-md4">
-          <span class='glyphicon glyphicon-pencil index-icons mr-5'><%= link_to '', id: "#{user.id}" %></span> 
-          <span class='glyphicon glyphicon-trash index-icons mr-5'><%= link_to '' %></span>
-          <span class='glyphicon glyphicon-plus index-icons'><%= link_to '' %></span>
+          <span class='glyphicon glyphicon-pencil cohort-icons mr-5'><%= link_to '', id: "#{user.id}" %></span> 
+          <span class='glyphicon glyphicon-trash cohort-icons mr-5'><%= link_to '' %></span>
+          <span class='glyphicon glyphicon-plus cohort-icons'><%= link_to '' %></span>
         </div>
       </div>
     </div>

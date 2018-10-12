@@ -32,11 +32,6 @@ h2 {
   background-color: rgb(71, 39, 107);
 }
 
-.nav-toggle {
-  color: orange !important;
-  background-color: rgb(228, 149, 31);
-}
-
 .nav-li {
   margin: 0.5em;
   padding: 0.5em;
@@ -51,6 +46,15 @@ h2 {
   text-decoration: none;
   color: rgb(89, 50, 133);
 }
+
+.cohort-icons {
+  color: rgb(228, 149, 31);
+}
+
+.cohort-icons:hover {
+  color: white;
+}
+
 
 a {
   color: black;
