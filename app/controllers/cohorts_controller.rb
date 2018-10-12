@@ -40,7 +40,9 @@ class CohortsController < ApplicationController
   end
   
   def edit
-  
+    @cohort = Cohort.find(params[:id])
+    @courses = Course.all.map{ |c| [c.name, c.id] }
+    @users = User.all.map{ |c| [c.first_name, c.id] }
   end
 
   def destroy
@@ -57,7 +59,7 @@ class CohortsController < ApplicationController
   private
 
   def cohort_params
-    params.require(:cohort).permit(:name, :start_date, :end_date, :instructor)
+    params.require(:cohort).permit(:name, :start_date, :end_date, :instructor,:course_id, :user_id)
   end
 
   def set_cohort

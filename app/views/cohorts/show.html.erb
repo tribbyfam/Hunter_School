@@ -1,4 +1,4 @@
-<h2>Students</h2>
+<hr class="bg-warning"><h2>Students</h2><hr class="bg-warning">
 
 <% @cohort.users.each do |user| %>
 <div class="container-fluid profile-info">
@@ -16,9 +16,9 @@
       <p><span>Education: </span><%= user.education %></p>
       <div class="row">
         <div class="col-md4">
-          <span><%= link_to 'Edit', id: "#{user.id}", class: 'glyphicon glyphicon-pencil index-icons' %></span>
-          <button class="btn btn-warning btn-md delete"><%= link_to 'Delete' %></button>
-          <button class="btn btn-warning btn-md"><%= link_to 'Add' %></button>
+          <span class='glyphicon glyphicon-pencil index-icons mr-5'><%= link_to '', id: "#{user.id}" %></span> 
+          <span class='glyphicon glyphicon-trash index-icons mr-5'><%= link_to '' %></span>
+          <span class='glyphicon glyphicon-plus index-icons'><%= link_to '' %></span>
         </div>
       </div>
     </div>
