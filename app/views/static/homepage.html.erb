@@ -1,8 +1,8 @@
 
 <div class="jumbotron">
-  <h1>
+  <hr class="bg-warning"><h1>
     Hunter School of Web Design
-  </h1>
+  </h1><hr class="bg-warning">
   <p>
    <% if admin_types.include?(current_user.try(:type)) %>
     <%= render "admin" %>
