@@ -16,29 +16,16 @@
      <%# <h1> <%= cohort.user.first_name</h1> %> %>
     </td>
     <td> 
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-4">
-          <span><%= link_to '', edit_cohort_path(cohort), id: "edit_#{cohort.id}", class: 'glyphicon glyphicon-pencil index-icons' %></span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <span><%= link_to '', cohort_path(cohort), method: :delete, id: "#{cohort.id}", class: 'glyphicon glyphicon-trash index-icons' %></span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-           <span><%= link_to '', new_cohort_path(cohort), id: "#{cohort.id}", class: 'glyphicon glyphicon-plus index-icons' %></span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">      
-          <button class="btn">
-          <%= link_to 'Students', cohort_path(cohort) %>
-          </button>
-        </div>
-      </div>
-    </div>
+      <span><%= link_to '', edit_cohort_path(cohort), id: "edit_#{cohort.id}", class: 'glyphicon glyphicon-pencil index-icons' %></span>
+    </td>
+    <td>
+      <span><%= link_to '', cohort_path(cohort), method: :delete, id: "#{cohort.id}", class: 'glyphicon glyphicon-trash index-icons' %></span>
+    </td>
+    <td>
+      <span><%= link_to '', new_cohort_path(cohort), id: "#{cohort.id}", class: 'glyphicon glyphicon-plus index-icons' %></span>
+    </td>    
+      <button class="btn">
+      <%= link_to 'Students', cohort_path(cohort) %>
+      </button>
   </tr>
       
