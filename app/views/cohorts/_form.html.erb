@@ -1,5 +1,10 @@
 
 <%= form_for @cohort, class: "form-horizontal" do |c| %>
+  <% if @cohort.errors.any? %>
+  <% @cohort.errors.full_messages.each do |error| %>
+  <%= js add_gritter(error, title: "School App Notification", sticky: false) %>
+  <% end %>
+<% end %>
 
   <div class="form-group">   
     <%= c.label :name, class: "col-sm-2 control-label" %>

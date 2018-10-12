@@ -1,11 +1,11 @@
 <% if user_signed_in? %>
 
-<div class="container-fluid">
+<div class="container-fluid profile-info">
   <div class="row media">
     <div class="col-md-2">
       <div class="media-left media-top">
         <a href="#">
-          <%= image_tag(@user.email, size: "66", class: "photo") %>
+          <%= image_tag(@user.email, size: "75", class: "photo") %>
         </a>
       </div>
     </div>

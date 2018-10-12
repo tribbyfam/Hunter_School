@@ -1,10 +1,9 @@
-<h2>show page</h2>
-<%= @cohort.users.inspect %>
+<h2>Students</h2>
 
-<div class="container-fluid">
+<% @cohort.users.each do |user| %>
+<div class="container-fluid profile-info">
   <div class="row media">
     <div class="col-md-2">
-    <% @cohort.users.each do |user| %>
       <div class="media-left media-top">
         <a href="#">
           <%= image_tag(user.email, size: "66", class: "photo") %>
@@ -15,8 +14,8 @@
       <p><span>Name: </span><%= user.full_name %></p>
       <p><span>Age: </span><%= user.age %></p>
       <p><span>Education: </span><%= user.education %></p>
+      <%= link_to 'Edit', class: "btn" %>
     </div>
   </div>
-
 </div>
 <% end %>
