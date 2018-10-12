@@ -2,6 +2,12 @@ class UsersController < ApplicationController
   before_action :authorize, except: [:new]
   def index
     @user = User.all
+
+    respond_to do |format|
+      format.html
+      format.js { render 'main.js.erb' }
+      format.json { render json: @users }
+    end
   end
 
   def new

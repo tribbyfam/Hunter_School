@@ -4,12 +4,14 @@ class CohortsController < ApplicationController
   def index
     @cohorts = Cohort.all
     @user = current_user
-    @instructors = User.find(:role == 'instructor')
-    @instructor = @instructors.id 
+    # @instructors = User.find(:role == 'instructor')
+    # @instructor = @instructors.id 
   end
 
   def new
     @cohort = Cohort.new
+    @courses = Course.all.map{ |c| [c.name, c.id] }
+    @users = User.all.map{ |c| [c.first_name, c.id] }
   end
 
   def create
@@ -42,8 +44,14 @@ class CohortsController < ApplicationController
   end
 
   def destroy
-    @cohort.delete
-    redirect_to cohorts_path, notice: 'Your cohort was successfully deleted'
+    @cohort = Cohort.find(params[:id])
+    @cohort.destroy
+
+    respond_to do |format|
+      format.html
+      format.js
+      # format.json { render json: @cohorts }
+    end
   end
 
   private

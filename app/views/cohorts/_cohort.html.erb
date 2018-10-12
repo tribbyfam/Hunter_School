@@ -1,5 +1,5 @@
-
-  <tr>
+<% @cohorts.each do |cohort| %>
+  <tr id="cohort<%= cohort.id %>">
     <td>
       <%= cohort.id %>
     </td>
@@ -19,7 +19,8 @@
       <span><%= link_to '', edit_cohort_path(cohort), id: "edit_#{cohort.id}", class: 'glyphicon glyphicon-pencil index-icons' %></span>
     </td>
     <td>
-      <span><%= link_to '', cohort_path(cohort), method: :delete, id: "#{cohort.id}", class: 'glyphicon glyphicon-trash index-icons' %></span>
+      <%= link_to(cohort_path(id: cohort.id), method: :delete, remote: true) do %> <span class='glyphicon glyphicon-trash index-icons'></span>
+      <% end %>
     </td>
     <td>
       <span><%= link_to '', new_cohort_path(cohort), id: "#{cohort.id}", class: 'glyphicon glyphicon-plus index-icons' %></span>
@@ -28,4 +29,5 @@
       <span><%= link_to '', cohort_path(cohort), class: 'glyphicon glyphicon-folder-open index-icons' %></span>
     </td>  
   </tr>
+  <% end %>
       

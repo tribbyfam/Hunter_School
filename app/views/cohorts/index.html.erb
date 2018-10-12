@@ -32,7 +32,8 @@
       </th>
     </tr>
   </thead>
-  <tbody>
-   <%= render @cohorts %>
+  
+  <tbody >
+  <%= render partial: "cohort", locals: {cohorts: @cohorts} %>
   </tbody>
 </table>

@@ -1,11 +1,11 @@
 
 <% @courses.each do |course| %>
-  <tr>
+  <tr id="course<%= course.id %>">
     <td>
       <%=  course.id %>
     </td>
     <td>
-      <%= link_to  course.name.upcase, course %>
+      <%= link_to course.name.upcase, course %>
     </td>
     <td>
       <%=  course.hours %>
@@ -19,8 +19,11 @@
     <td> 
       <span><%= link_to '', edit_course_path(course), id: "edit_#{course.id}", class: 'glyphicon glyphicon-pencil index-icons' %></span>
     </td> 
+    <td> 
+      <span><%= link_to '', new_course_path(course), id: "edit_#{course.id}", class: 'glyphicon glyphicon-plus index-icons' %></span>
+    </td> 
     <td>
-      <span><%= link_to '', course_path(course), method: :delete, class: 'glyphicon glyphicon-trash index-icons', id: "#{course.id}", data: { confirm: 'Are you sure?' } %></span>
+      <span><%= link_to '', course_path(course), remote: true, method: :delete, class: 'glyphicon glyphicon-trash index-icons', id: "#{course.id}", data: { confirm: 'Are you sure?' } %></span>
     </td>
   </tr>
 <% end %>    

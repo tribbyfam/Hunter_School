@@ -39,7 +39,12 @@ class CoursesController < ApplicationController
 
   def destroy
     set_course.delete
-    redirect_to courses_path, notice: 'Your course was successfully deleted'
+    
+    respond_to do |format|
+      format.html
+      format.js { render '/courses/delete.js.erb'}
+      format.json { render json: @courses }
+    end
   end
    
   private
