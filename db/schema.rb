@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_10_11_205614) do
     t.date "end_date"
     t.bigint "course_id"
     t.bigint "user_id"
+    t.string "instructor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 2018_10_11_205614) do
     t.string "url"
     t.string "type"
     t.integer "salary"
+    t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
