@@ -4,6 +4,8 @@ class CohortsController < ApplicationController
   def index
     @cohorts = Cohort.all
     @user = current_user
+    @instructors = User.find(:role == 'instructor')
+    @instructor = @instructors.id 
   end
 
   def new

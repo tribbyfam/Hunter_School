@@ -49,6 +49,16 @@ h1 {
   color: rgb(89, 50, 133);
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(71, 39, 107);
+}
+
 .photo {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

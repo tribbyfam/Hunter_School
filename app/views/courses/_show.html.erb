@@ -6,9 +6,15 @@
     <td>
       <%= @course.hours %>
     </td> 
+    <td>
+    </td>
+    <td>
+    </td>
     <tr class="tb-header">
       <th>
         Cohorts:
+      </th>
+      <th>
       </th>
       <th>
       </th>
@@ -18,7 +24,9 @@
       <% @course.cohorts.each do |cohort| %>
     <tr>     
       <td>
-        <h5><%= cohort.name %></h5> <hr>
+        <h5><%= cohort.name %></h5>
+      </td>
+      <td>
       </td>
       <td>
         <%= link_to "", edit_course_path(@course), class: "glyphicon glyphicon-pencil index-icons" %>
@@ -28,12 +36,13 @@
       </td>
     </tr>
       <% end %>
+    <tr>
+      <td>
+        <%= link_to "Add New Cohort", new_cohort_path(@cohort), class: 'glyphicon glyphicon-plus index-icons btn btn-warning btn-lg' %>
+      </td>
+    </tr>
   </tr>
-  <tr>
-    <button class="btn btn-warning btn-lg btn-block"> 
-      <%= link_to "Add New Cohort", new_cohort_path(@cohort), class: 'glyphicon glyphicon-plus index-icons' %>
-    </button>  
-  </tr>
+  
   
 
 
