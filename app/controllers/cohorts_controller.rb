@@ -4,14 +4,15 @@ class CohortsController < ApplicationController
   def index
     @cohorts = Cohort.all
     @user = current_user
-    # @instructors = User.find(:role == 'instructor')
-    # @instructor = @instructors.id 
+    @users = User.all
+    
+     
   end
 
   def new
     @cohort = Cohort.new
     @courses = Course.all.map{ |c| [c.name, c.id] }
-    @users = User.all.map{ |c| [c.first_name, c.id] }
+    @users = User.all.map{ |c| [c.first_name, c.id, c.role] }
   end
 
   def create

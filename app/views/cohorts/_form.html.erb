@@ -18,6 +18,11 @@
     <%= c.label :end_date, class: "col-sm-2 control-label" %>
     <%= c.date_field :end_date, class: "form-control" %>
   </div>
+  <div class="form-group">   
+    <%= c.label :Instructor, class: "col-sm-2 control-label" %>   
+    <%= c.select :user_id, options_for_select(@users, @cohort.user_id), class: "form-control" %>
+    
+  </div>
   
   <button type="submit" class="btn btn-warning btn-lg btn-block">
     Save

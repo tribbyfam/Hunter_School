@@ -8,6 +8,9 @@
         <a href="#">
           <%= image_tag(user.email, size: "66", class: "photo") %>
         </a>
+        <% if user.role == 'instructor' %> 
+        <p><%= puts "Instructor" %></p>
+        <% end %>
       </div>
     </div>
     <div class="col-md-9 profile-info">
@@ -15,6 +18,13 @@
       <p><span>Age: </span><%= user.age %></p>
       <p><span>Education: </span><%= user.education %></p>
       <p><span>Salary: </span><%= user.salary %></p>
+      <div class="row">
+        <div class="col-md4">
+          <span class='glyphicon glyphicon-pencil cohort-icons mr-5'><%= link_to '' %></span> 
+          <span class='glyphicon glyphicon-trash cohort-icons mr-5'><%= link_to '' %></span>
+          <span class='glyphicon glyphicon-plus cohort-icons'><%= link_to '' %></span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
