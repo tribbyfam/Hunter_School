@@ -46,8 +46,7 @@ class CohortsController < ApplicationController
   end
 
   def destroy
-    @cohort = Cohort.find(params[:id])
-    @cohort.destroy
+    set_cohort.delete
 
     respond_to do |format|
       format.html

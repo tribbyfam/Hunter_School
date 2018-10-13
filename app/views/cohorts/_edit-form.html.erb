@@ -1,4 +1,3 @@
-
 <%= form_for @cohort, class: "form-horizontal" do |c| %>
   <% if @cohort.errors.any? %>
   <% @cohort.errors.full_messages.each do |error| %>
@@ -17,6 +16,14 @@
   <div class="form-group">   
     <%= c.label :end_date, class: "col-sm-2 control-label" %>
     <%= c.date_field :end_date, class: "form-control" %>
+  </div>
+  <div class="form-group">   
+    <%= c.label :course_id, class: "col-sm-2 control-label" %>
+    <%= c.select :course_id, options_for_select(@courses, @cohort.course_id), class: "form-control" %>
+  </div>
+  <div class="form-group">   
+    <%= c.label :user_id, class: "col-sm-2 control-label" %>
+    <%= c.select :user_id, options_for_select(@users, @cohort.user_id), class: "form-control" %>
   </div>
   
   <button type="submit" class="btn btn-warning btn-lg btn-block">
