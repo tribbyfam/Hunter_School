@@ -1,19 +1,26 @@
 
-<%= form_for @course, class: "form-horizontal" do |c| %>
-  <% if @course.errors.any? %>
-    <% @course.errors.full_messages.each do |error| %>
+<%= form_for @user, class: "form-horizontal" do |c| %>
+  <% if @user.errors.any? %>
+    <% @user.errors.full_messages.each do |error| %>
     <%= js add_gritter(error, title: "School App Notification", sticky: false) %>
     <% end %>
   <% end %>
 
   <div class="form-group">   
-    <%= c.label :Name, class: "col-sm-2 control-label" %>
-    <%= c.text_field :name, class: "form-control" %>
+    <%= c.label :First_Name, class: "col-sm-2 control-label" %>
+    <%= c.text_field :first_name, class: "form-control" %>
   </div>
   <div class="form-group">   
-    <%= c.label :Hours, class: "col-sm-2 control-label" %>
-    <%= c.text_field :hours, class: "form-control" %>
+    <%= c.label :Last_Name, class: "col-sm-2 control-label" %>
+    <%= c.text_field :first_name, class: "form-control" %>
   </div>
-  <%= link_to "Students", class="btn btn-warning btn-lg btn-block" %>
+  <div class="form-group">   
+    <%= c.label :Age, class: "col-sm-2 control-label" %>
+    <%= c.text_field :last_name, class: "form-control" %>
+  </div>
+  <div class="form-group">   
+    <%= c.label :Education, class: "col-sm-2 control-label" %>
+    <%= c.text_field :education, class: "form-control" %>
+  </div>
 
 <% end %>

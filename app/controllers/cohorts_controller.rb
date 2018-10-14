@@ -29,6 +29,7 @@ class CohortsController < ApplicationController
   end
 
   def show
+    @cohort = set_cohort
   end
    
   def update

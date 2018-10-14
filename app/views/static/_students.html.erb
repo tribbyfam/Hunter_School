@@ -19,9 +19,9 @@
       <p><span>Salary: </span><%= @user.salary %></p>
       <div class="row">
         <div class="col-md4">
-          <span class='glyphicon glyphicon-pencil cohort-icons mr-5'><%= link_to '' %></span> 
-          <span class='glyphicon glyphicon-trash cohort-icons mr-5'><%= link_to '' %></span>
-          <span class='glyphicon glyphicon-plus cohort-icons'><%= link_to '' %></span>
+          <span class='glyphicon glyphicon-pencil cohort-icons mr-5'><%= link_to '', edit_student_path(@user)  %></span> 
+          <span class='glyphicon glyphicon-trash cohort-icons mr-5'><%= link_to '', new_student_path(@users) %></span>
+          <span class='glyphicon glyphicon-plus cohort-icons'><%= link_to '', student_path(@user), method: :delete, id: "#{@user.id}", data: { confirm: 'Are you sure?' } %></span>
         </div>
       </div>
     </div>

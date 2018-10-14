@@ -5,6 +5,10 @@
         <%= cohort.name %>
       </td>
       <td>
+        <%= cohort.start_date %>
+      </td>
+      <td>
+        <%= cohort.end_date %>
       </td>
       <td>
         <%= link_to "", edit_course_path(@course), class: "glyphicon glyphicon-pencil index-icons" %>
@@ -14,13 +18,7 @@
       </td>
     </tr>
   <% end %>
-  
-    <div class="row">
-      <div class="col md-3">
-        <span><%= link_to "", new_cohort_path(@cohort), class: 'glyphicon glyphicon-plus index-icons btn btn-warning btn-lg' %></span>
-      </div>
-    </div>
-  
+
   
 
 
