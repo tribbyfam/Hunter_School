@@ -20,7 +20,13 @@
   </div>
   <div class="form-group">   
     <%= c.label :Education, class: "col-sm-2 control-label" %>
-    <%= c.text_field :education, class: "form-control" %>
+    <%= c.select :education, options_for_select([HS, College, Masters, PHD]), class: "form-control" %>
   </div>
+  <% if params[:role] == 'student' %>
+  <div class="form-group">   
+    <%= c.label :Salary, class: "col-sm-2 control-label" %>
+    <%= c.hidden_field :salary, class: "form-control" %>
+  </div>
+  <% end %>
 
 <% end %>

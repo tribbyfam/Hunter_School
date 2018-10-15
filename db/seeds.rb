@@ -39,29 +39,4 @@ User.create(email: "skinner@test.com", password: "123123", password_confirmation
 User.create(email: "barney@test.com", password: "123123", password_confirmation: "123123", first_name: "Barney", last_name: "Grumble", age: "38", education: "HS", url: "barney@test.com", role: "student")
 User.create(email: "bart@test.com", password: "123123", password_confirmation: "123123", first_name: "Bart", last_name: "Simpson", age: "28", education: "BS", url: "bart@test.com", role: "student")
 
-puts 'regular users'
-
-# Cohort_user.create(cohort_id: 1, user_id: 2)
-# Cohort_user.create(cohort_id: 2, user_id: 3)
-# Cohort_user.create(cohort_id: 3, user_id: 4)
-# Cohort_user.create(cohort_id: 4, user_id: 5)
-# Cohort_user.create(cohort_id: 5, user_id: 6)
-# Cohort_user.create(cohort_id: 6, user_id: 7)
-# Cohort_user.create(cohort_id: 1, user_id: 8)
-# Cohort_user.create(cohort_id: 2, user_id: 9)
-# Cohort_user.create(cohort_id: 3, user_id: 10)
-# Cohort_user.create(cohort_id: 4, user_id: 9)
-# Cohort_user.create(cohort_id: 5, user_id: 12)
-# Cohort_user.create(cohort_id: 6, user_id: 12)
-# Cohort_user.create(cohort_id: 1, user_id:13)
-# Cohort_user.create(cohort_id: 2, user_id: 14)
-# Cohort_user.create(cohort_id: 3, user_id: 15)
-# Cohort_user.create(cohort_id: 4, user_id: 16)
-# Cohort_user.create(cohort_id: 5, user_id: 16)
-# Cohort_user.create(cohort_id: 6, user_id: 11)
-# Cohort_user.create(cohort_id: 1, user_id: 11)
-# Cohort_user.create(cohort_id: 2, user_id: 10)
-# Cohort_user.create(cohort_id: 3, user_id: 5)
-# Cohort_user.create(cohort_id: 1, user_id: 4)
-
 

@@ -7,7 +7,7 @@
    <% if admin_types.include?(current_user.try(:type)) %>
     <%= render "admin" %>
     <% else %>
-      <%= render "students" %>
+      <%= render "students", locals: {role: @user} %>
    <% end %>
 
   </p>
