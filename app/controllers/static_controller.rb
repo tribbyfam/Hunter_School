@@ -7,7 +7,10 @@ class StaticController < ApplicationController
   end
  
   def edit
-    edit_student_path
+    @user = current_user
+    if admin_types.include?(current_user.type)
+    end
+
   end
 
   def new
@@ -25,6 +28,7 @@ class StaticController < ApplicationController
   end
 
   def update
+    @user = current_user
     if @user.update(user_params)
       redirect_to users_path, notice: 'Your user was successfully edited'
     else

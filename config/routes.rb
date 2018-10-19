@@ -5,14 +5,16 @@ Rails.application.routes.draw do
       resources :courses
       resources :static
       resources :admin_users
-
+      resources :students
       root to: "users#index"
     end
     
   resources :cohorts
   resources :courses
-  resources :static
+  resources :static do 
+    resources :students
+  end 
   devise_for :users, skip: [:registration]
   root to: 'static#homepage'
-  resources :students
+  
 end
