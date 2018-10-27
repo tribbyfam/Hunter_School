@@ -14,13 +14,13 @@
       <%=  course.created_at.strftime("%d/%m/%Y") %>
     </td>
     <td> 
-      <span><%= link_to '', edit_course_path(course), id: "edit_#{course.id}", class: 'glyphicon glyphicon-pencil index-icons' %></span>
+      <span><%= link_to '', edit_course_path(course), id: "edit_#{course.id}" if policy(course).update? class: "far fa-pencil-alt index-icons" %></span>
     </td>  
     <td>
-      <span><%= link_to '', course_path(course), remote: true, method: :delete, class: 'glyphicon glyphicon-trash index-icons', id: "#{course.id}", data: { confirm: 'Are you sure?' } %></span>
+      <span><%= link_to '', course_path(course), remote: true, method: :delete, class: "fas fa-trash-alt index-icons", id: "#{course.id}", data: { confirm: 'Are you sure?' } %></span>
     </td>
     <td>
-      <span><%= link_to '', course_path(course),id: "edit_#{course.id}", class: "glyphicon glyphicon-folder-open index-icons" %></span>
+      <span><%= link_to '', course_path(course),id: "edit_#{course.id}", class: "fas fa-folder-open index-icons" %></span>
     </td>
   </tr>
 <% end %>    
