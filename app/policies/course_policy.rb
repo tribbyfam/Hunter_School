@@ -16,9 +16,9 @@ class CoursePolicy < ApplicationPolicy
     end
   end
 
-  def update?
-    return true if admin_types.include?(user.type)
-  end
+  # def update?
+  #   return true if admin_types.include?(user.type)
+  # end
 
   private
 
