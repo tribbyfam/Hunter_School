@@ -37,9 +37,11 @@ class StaticController < ApplicationController
   end
 
   def destroy
+    @user = User
   end
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :age, :education, :salary, :role, :course_id, :cohort_id)
   end
+
 end

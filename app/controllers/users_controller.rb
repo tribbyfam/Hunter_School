@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   def destroy
     user = current_user
     user.destroy
-    redirect_to users_path
+    redirect_to '/users/sign_in'
   end
 
   def show

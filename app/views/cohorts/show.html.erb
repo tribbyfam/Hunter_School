@@ -1,10 +1,6 @@
 <hr class="bg-warning"><h2>Students</h2><hr class="bg-warning">
-<%# <%= form_for @users, class: "form-horizontal" do |c| %>
-  <div class="form-group">   
-    <%# <%= @users.label :user_id, class: "col-sm-2 control-label" %>
-    <%# <%= @users.select :user, options_for_select(@users, @user_id), class: "form-control" %> 
-    <% puts @cohort_user%>
-    <%puts "!!!!!!!!!!!"%>
+
+  <div class="form-group">    
     <%= form_with model: @cohort_user do |form| %>
       <%= form.select(:users_ids, options_for_select(@users), 
         { prompt: 'Add Students'}
@@ -12,10 +8,8 @@
       <%= form.hidden_field :cohort_id, value: @cohort.id %>
       <%= form.submit%>
     <% end %> 
-
-
   </div>
-<%# <% end %> %>
+
 <% @cohort.users.each do |user| %>
 <div class="container-fluid ml-4 mt-1">
   <div class="row media">
