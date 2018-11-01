@@ -30,6 +30,9 @@ class CohortsController < ApplicationController
 
   def show
     @cohort = set_cohort
+    @cohort_user=CohortUser.new
+    @users = User.all
+    @users = User.all.map{|user| [user.first_name, user.id]}
   end
    
   def update
@@ -52,10 +55,10 @@ class CohortsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.js
-      # format.json { render json: @cohorts }
+      format.js { render json: @cohorts }
     end
   end
+ 
 
   private
 

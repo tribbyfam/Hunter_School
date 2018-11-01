@@ -19,8 +19,7 @@
       <span><%= link_to '', edit_cohort_path(cohort), id: "edit_#{cohort.id}", class: "fas fa-pencil-alt index-icons" %></span>
     </td>
     <td>
-      <%= link_to(cohort_path(id: cohort.id), method: :delete, remote: true) do %> <i class="fas fa-trash-alt index-icons"></i>
-      <% end %>
+      <span><%= link_to '', cohort_path(cohort), remote: true, method: :delete, class: "fas fa-trash-alt index-icons", id: "#{cohort.id}", data: { confirm: 'Are you sure?' } %></span>
     </td>
     <td>
       

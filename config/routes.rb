@@ -6,8 +6,10 @@ Rails.application.routes.draw do
       resources :static
       resources :admin_users
       resources :students
+      
       root to: "users#index"
     end
+    resources :cohort_users
     
   resources :cohorts
   resources :courses

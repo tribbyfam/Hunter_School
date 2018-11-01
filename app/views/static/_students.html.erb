@@ -19,7 +19,7 @@
       <p><span>Salary: </span><%= @user.salary %></p>
       <div class="row">
         <div class="col-md4">
-          <span><i class="fas fa-pencil-alt index-icons2"><%= link_to '', edit_static_path(@user)  %></i></span>
+          <span><i class="fas fa-pencil-alt index-icons2"><%= link_to '', edit_admin_static_path(@user)  %></i></span>
           <span><i class="fas fa-trash-alt index-icons2"><%= link_to '', new_static_path(@users) %></i></span>
           <span><i class="fas fa-folder-open index-icons2"><%= link_to '', static_path(@user), method: :delete, id: "#{@user.id}", data: { confirm: 'Are you sure?' } %></i></span>
         </div>
