@@ -11,4 +11,6 @@ class User < ApplicationRecord
   def full_name
     first_name.capitalize + " " + last_name.capitalize
   end
+  scope :instructor, -> { where role: 'instructor' }
+  scope :student, -> { where role: 'student' }
 end

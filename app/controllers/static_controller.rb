@@ -37,7 +37,7 @@ class StaticController < ApplicationController
   end
 
   def destroy
-    @user = User
+    
   end
 
   def user_params

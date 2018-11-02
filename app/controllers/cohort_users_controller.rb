@@ -1,6 +1,6 @@
 class CohortUsersController < ApplicationController
   def new
-    puts "!!!!!"
+   
   end
   def create
     CohortUser.create(

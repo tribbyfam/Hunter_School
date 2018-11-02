@@ -47,7 +47,8 @@ class CohortsController < ApplicationController
   def edit
     @cohort = Cohort.find(params[:id])
     @courses = Course.all.map{ |c| [c.name, c.id] }
-    @users = User.all.map{ |c| [c.first_name, c.id] }
+    @users = User.all.map{ |c| [c.first_name, c.id, c.role] }
+    
   end
 
   def destroy

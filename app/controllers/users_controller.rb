@@ -44,6 +44,12 @@ class UsersController < ApplicationController
     redirect_to '/users/sign_in'
   end
 
+  def delete_user
+    @user = User.find(params[:id])
+    @user.destroy
+   
+  end
+
   def show
     @user = current_user
   end

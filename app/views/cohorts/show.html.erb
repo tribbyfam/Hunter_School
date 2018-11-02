@@ -20,17 +20,22 @@
         </a>
       </div>
     </div>
-    <div class="col-md-9 profile-info ml-5">
-      <p><span>Name: </span><%= user.full_name %></p>
-      <p><span>Age: </span><%= user.age %></p>
-      <p><span>Education: </span><%= user.education %></p>
-      <div class="row">
-        <div class="col-md4">
-          <span class='glyphicon glyphicon-pencil cohort-icons mr-5'><%= link_to '', id: "#{user.id}" %></span> 
-          <span class='glyphicon glyphicon-trash cohort-icons mr-5'><%= link_to '' %></span>
-          <span class='glyphicon glyphicon-plus cohort-icons'><%= link_to '' %></span>
-        </div>
+    <div class="row col-md-6">
+      <div>
+        <p><span>Name: </span><%= user.full_name %></p>
+        <p><span>Age: </span><%= user.age %></p>
+        <p><span>Education: </span><%= user.education %></p>
+    
       </div>
+    </div>
+    <div class="col-md-3">
+      <span>
+        <i class="fas fa-pencil-alt index-icons2"></i> 
+        
+        </span>
+      <span>
+        <%= link_to '', cohort_path(@cohort), remote: true, method: :delete, class: "fas fa-trash-alt index-icons", id: "#{user.id}", data: { confirm: 'Are you sure?' } %> 
+      </span>
     </div>
   </div>
 </div>
